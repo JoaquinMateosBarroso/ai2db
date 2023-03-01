@@ -2,6 +2,10 @@
 var boton = document.getElementById("mic");
 boton.onclick = function() {
 
+    const words = document.querySelector('#text');
+    words.innerHTML = "";
+
+
     window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
         
@@ -11,7 +15,6 @@ boton.onclick = function() {
     recognition.lang = "es-ES";
 
     let p = document.createElement('p');
-    const words = document.querySelector('#text');
     words.appendChild(p);
 
     recognition.addEventListener('result', e => {

@@ -10,9 +10,9 @@ def setupfor_sql():
 
 def pediryresponder_sql(text_for_query: str):
     setupfor_sql()
-    prompt = text_for_query
+    
     completion = openai.Completion.create(engine="text-davinci-002",
-                                          prompt=prompt,
+                                          prompt=text_for_query,
                                           max_tokens=100)
-    return completion
+    return completion.choices[0].text
 
