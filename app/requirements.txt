@@ -4,6 +4,4 @@ ormar==0.12.1
 psycopg2-binary==2.9.5
 uvicorn==0.20.0
 openapi
-psycopg2
-pygresql
 jinja2
