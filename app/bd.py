@@ -28,7 +28,7 @@ def connect():
 
 
 def query(query: str):
-    sql = """{query}"""
+    sql = query
     conn = None
     result = []
     try:
