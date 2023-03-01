@@ -26,7 +26,7 @@ boton.onclick = function() {
         }
     });
 
-    recognition.addEventListener('end', recognition.start);
+    // recognition.addEventListener('end', recognition.start);
 
     recognition.start();
 }
