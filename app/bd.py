@@ -30,6 +30,7 @@ def connect():
 def query(query: str):
     sql = """{query}"""
     conn = None
+    result = []
     try:
         params = config()
         conn = psycopg2.connect(**params)
@@ -37,7 +38,6 @@ def query(query: str):
 
         cur.execute(sql)
 
-        result = []
         row = cur.fetchone()
         while row is not None:
             result.append(row)
