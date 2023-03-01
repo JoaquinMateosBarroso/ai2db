@@ -4,4 +4,5 @@ ormar==0.12.1
 psycopg2-binary==2.9.5
 uvicorn==0.20.0
 openapi
-Speech_Recognition
+psycopg2
+pygresql
