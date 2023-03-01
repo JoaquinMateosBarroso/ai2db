@@ -8,13 +8,11 @@ def setupfor_sql():
                                           max_tokens=100)
     return completion
 
-def pediryresponder_sql():
-    prompt = input("¿Qué consulta quieres hacer? \n(Escribe 'salir' para terminar el programa) \n")
+def pediryresponder_sql(text_for_query: str):
+    setupfor_sql()
+    prompt = text_for_query
     completion = openai.Completion.create(engine="text-davinci-002",
                                           prompt=prompt,
                                           max_tokens=100)
     return completion
-    
-print(setupfor_sql().choices[0].text)
-print(pediryresponder_sql().choices[0].text)
 
