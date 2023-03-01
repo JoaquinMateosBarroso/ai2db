@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="FastAPI, Docker, and Traefik")
+app = FastAPI(title="Ai2SQL")
 
 
 @app.get("/")
