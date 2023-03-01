@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Generador de consultas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <meta charset="utf-8">
+    <!-- This link tag is used to link html file with css file -->
+    <link rel="stylesheet" href="style.css"
+    <title></title>
   </head>
-  <body>
-    <h1>Generador de consultas</h1>
-    
 
-    <div id="controls">
-  	 <button id="recordButton">Record</button>
-  	 <button id="pauseButton" disabled>Pause</button>
-  	 <button id="stopButton" disabled>Stop</button>
-    </div>
-    <div id="formats">Format: start recording to see sample rate</div>
-  	<p><strong>Recordings:</strong></p>
-  	<ol id="recordingsList"></ol>
-    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
-  	<script src="js/recorder.js"></script>
-  	<script src="js/app.js"></script>
+  <body>
+    <!--Nav tag is used here for navigation bar at top right corner -->
+    <nav>
+      <div id="navdiv">
+        <a href="https://www.google.com/gmail/about/#" class="c">Gmail</a>
+        <a href="https://www.google.co.in/imghp?hl=en&tab=wi&ogbl" class="c">Images</a>
+        <div><img src="menu.png"></div>
+        <div><button type="submit" name="button">Sign In</button></div>
+      </div>
+    </nav>
+    <!--End of navigation -->
+    <!-- Main body of google -->
+    <main>
+      <center>
+        <img src="images/logo.png" width="20%" height="5%" id="googleimg">
+        <!-- Search bar -->
+        <div>
+          <div id="maindiv">
+            <span id="text"><img src="search.png"></span>
+            <span id="inputspan"></span>
+            <button id="mic" onclick="mySpeechRecognition()"></span>
+          </div>
+        </div>
+        <!--Buttons -->
+        <section>
+          <div><button type="submit">Info y tal</button></div>
+          <div><button type="submit">Hacer solicitud</button></div>
+        </section>
+        <div><a href="">Work, learn and run your bussiness from home</a></div>
+        <div id="Bottomdiv">
+          
+
+        </div>
+      </center>
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>
