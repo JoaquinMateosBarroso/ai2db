@@ -23,23 +23,28 @@
       <center>
         <img src="/frontend/images/logo.png" width="20%" height="5%" id="googleimg">
         <!-- Search bar -->
-        <div>
+        
+          
+        <form action="/" method="get">
           <div id="maindiv">
             <span id="search"><img src="search.png"></span>
-            <span id="text"></span>
-            <button id="mic" onclick="mySpeechRecognition()"></span>
+            <input type="text" name="prompt" id="text">
+            <button id="mic" onclick="mySpeechRecognition()">
           </div>
-        </div>
-        <!--Buttons -->
-        <section>
-          <div><button type="submit">Info y tal</button></div>
-          <div><button type="submit">Hacer solicitud</button></div>
-        </section>
+          <section>
+            <div><a href="https://es.wikipedia.org/wiki/Inteligencia_artificial">Info y tal</a></div>
+            <div><button type="submit">Hacer solicitud</button></div>
+          </section>
+        </form>
         <div><a href="">Work, learn and run your bussiness from home</a></div>
         <div id="Bottomdiv">
-          
-
         </div>
+        
+        {% if table %}
+          <p>Aqui va la tabla resultante. El prompt es {{ table[0] }}</p>
+
+        {% endif %}
+
       </center>
       <script src="/frontend/script.js"></script>
     </main>

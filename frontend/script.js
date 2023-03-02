@@ -1,9 +1,8 @@
 
 var boton = document.getElementById("mic");
-boton.onclick = function() {
-
+boton.onclick = function(e) {
+    e.preventDefault()
     const words = document.querySelector('#text');
-    words.innerHTML = "";
 
 
     window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -23,9 +22,8 @@ boton.onclick = function() {
         .map(result => result.transcript)
         .join('')
 
-        p.textContent = transcript;
         if(e.results[0].isFinal) {
-            words.innerHTML(p);
+            words.value += transcript;
         }
     });
 
