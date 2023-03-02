@@ -1,17 +1,16 @@
 version: '3.8'
-
 services:
   web:
-    build: ./app/
+    build: /home/pi/ai2sql/app/
     command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0'
     volumes:
-      - .:/app
+      - /home/pi/ai2sql/app/
     ports:
       - 8008:8000
     environment:
       - DATABASE_URL=postgresql://ai2sql:ai2sql@db:5432/ai2sql
     depends_on:
-      - db
+      - dbwe
   db:
     image: postgres:15-alpine
     volumes:
