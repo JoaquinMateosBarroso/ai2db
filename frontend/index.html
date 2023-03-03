@@ -45,6 +45,14 @@
 
         {% endif %}
 
+        <!--  Esto es para hacer pruebas para subir el csv !-->
+        <h2>Enviar archivo CSV</h2>
+        <form action="/uploadfile/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br><br>
+            <input type="submit" value="Enviar archivo">
+        </form>
+
       </center>
       <script src="/frontend/script.js"></script>
     </main>

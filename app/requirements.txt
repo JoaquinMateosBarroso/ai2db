@@ -5,3 +5,4 @@ psycopg2-binary==2.9.5
 uvicorn==0.20.0
 openapi
 jinja2
+python-multipart
