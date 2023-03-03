@@ -21,7 +21,7 @@ async def main( request: Request, prompt: str = ""):
     if prompt == "":
         response = templates.TemplateResponse("index.html", {"request": request})
     else:
-        headings, data = get_table_from_prompt(prompt=prompt)
+        headings, data = get_table_from_prompt(prompt=prompt, traslator=traslator)
         response = templates.TemplateResponse("index.html",{
             "request": request,
             "headings": headings,
