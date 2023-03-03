@@ -1,29 +1,35 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from app.bd import create_table, insert_vendor, query
+from app.sql_traslator import SQL_Traslator
+from app.services import get_table_from_prompt
+## Configure SQL AI Traslator with openai API KEY
+## traslator = SQL_Traslator("AQUI VA LA API KEY")
 
+## Configure fast api server, static files and jinja2 templates 
 app = FastAPI(title="Ai2SQL")
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
 templates = Jinja2Templates(directory="frontend")
 
-
+## CONTROLLERS
 @app.get("/", response_class=HTMLResponse)
 async def main( request: Request, prompt: str = ""):
     response: HTMLResponse
     if prompt == "":
         response = templates.TemplateResponse("index.html", {"request": request})
     else:
+        headings, data = get_table_from_prompt(prompt=prompt)
         response = templates.TemplateResponse("index.html",{
             "request": request,
-            "table": [prompt]
+            "headings": headings,
+            "data": data
         })
     return response
 
-
+"""
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile = File(...)):
     
@@ -51,7 +57,6 @@ async def create_upload_file(file: UploadFile = File(...)):
     
     return {"tablename": nombre_tabla}
 
-
 @app.get("/table/{tablename}", response_class=HTMLResponse)
 async def read_table(tablename: str):
     
@@ -61,3 +66,5 @@ async def read_table(tablename: str):
         raise error
     
     return {"table": tabla}
+
+"""

@@ -40,9 +40,21 @@
         <div id="Bottomdiv">
         </div>
         
-        {% if table %}
-          <p>Aqui va la tabla resultante. El prompt es {{ table[0] }}</p>
-
+        {% if data %}
+        <table>
+          <tr>
+          {% for header in headings %}
+            <th>{{ header }}</th>
+          {% endfor %}
+          </tr>
+          {% for row in data %}
+          <tr>
+            {% for cell in row %}
+              <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </table> 
         {% endif %}
 
         <!--  Esto es para hacer pruebas para subir el csv !-->

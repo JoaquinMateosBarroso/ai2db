@@ -30,17 +30,18 @@ def connect():
 def query(query: str):
     sql = query
     conn = None
-    result = []
+    headings = []
+    data = []
     try:
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
 
         cur.execute(sql)
-
+        headings = [desc[0] for desc in cur.description]
         row = cur.fetchone()
         while row is not None:
-            result.append(row)
+            data.append(row)
             row = cur.fetchone()
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
@@ -48,7 +49,7 @@ def query(query: str):
     finally:
         if conn is not None:
             conn.close()
-    return result
+    return headings, data
 
 
 # def create_table(creacion: str):

@@ -1,26 +1,42 @@
 version: '3.8'
+
 services:
   web:
-    build: /home/pi/ai2sql/app/
+    build: ./app/
     command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:app --host 0.0.0.0'
     volumes:
-      - /home/pi/ai2sql/app/
+      - .:/app
     ports:
       - 8008:8000
     environment:
       - DATABASE_URL=postgresql://ai2sql:ai2sql@db:5432/ai2sql
     depends_on:
-      - dbwe
+      - db
   db:
     image: postgres:15-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     expose:
-      - 5432
+      - 5432:5432
     environment:
       - POSTGRES_USER=ai2sql
       - POSTGRES_PASSWORD=ai2sql
       - POSTGRES_DB=ai2sql
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ai2sql@ai2sql.com
+      PGADMIN_DEFAULT_PASSWORD: ai2sql
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - db
 
 volumes:
+  pgadmin-data:
   postgres_data:
