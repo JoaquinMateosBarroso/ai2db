@@ -13,8 +13,11 @@ class SQL_Traslator:
         response = openai.Completion.create(engine="text-davinci-002",
                                             prompt=creation_db_script,
                                             max_tokens=100)
-        if response.choises[0].text != "Ok":
-            raise Exception()
+        
+        # He comentado esto porque el modelo que usamos no es exactamente el mismo que chatgpt, y puede haber algún momento en el que la respuesta no sea exactamente "OK"
+        
+        # if response.choises[0].text != "Ok":
+        #     raise Exception()
 
     def convert_to_sql(text_for_query: str):    
         completion = openai.Completion.create(engine="text-davinci-002",
