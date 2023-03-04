@@ -108,12 +108,19 @@ body nav ul li a{
   padding: 10px 20px;
   display: block;
   text-decoration: none;
-  color:#000000;
+  color:#FFFFFF;
   padding-bottom: 10px;
+  font-weight: bold;
+  font-size: medium;
 }
 body nav ul li a:hover{
   background-color: #eadca3;
   padding-bottom: 10px;
   text-decoration: none;
-  font-size: 105%;
+  font-size: 110%;
+}
+body nav ul li div button{
+  background-color: #a18046;
+  height: 50px;
+  font-size: medium;
 }
