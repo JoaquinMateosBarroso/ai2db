@@ -7,7 +7,7 @@ from fastapi.templating import Jinja2Templates
 from app.sql_traslator import SQL_Traslator
 from app.services import get_table_from_prompt
 ## Configure SQL AI Traslator with openai API KEY
-## traslator = SQL_Traslator("AQUI VA LA API KEY")
+traslator = SQL_Traslator("AQUI VA LA API KEY")
 
 ## Configure fast api server, static files and jinja2 templates 
 app = FastAPI(title="Ai2SQL")
