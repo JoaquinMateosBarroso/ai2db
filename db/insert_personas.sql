@@ -1,0 +1,18 @@
+INSERT INTO persona (dni, nombre, fecha_de_nacimiento, ciudad_nacimiento)
+VALUES ('12345678A', 'Juan Pérez', '1990-06-25', 1),
+       ('23456789B', 'Ana García', '1985-02-18', 2),
+       ('34567890C', 'Pedro Sánchez', '1982-09-02', 3),
+       ('45678901D', 'María Torres', '1995-12-10', 4),
+       ('56789012E', 'Luis Fernández', '1999-07-17', 5),
+       ('67890123F', 'Lucía Martínez', '1997-04-22', 6),
+       ('78901234G', 'Manuel Rodríguez', '1980-11-30', 7),
+       ('89012345H', 'Carmen González', '1978-08-15', 8),
+       ('90123456I', 'Laura Ruiz', '1987-03-12', 9),
+       ('01234567J', 'Javier Hernández', '1992-05-08', 10),
+       ('12345678K', 'Sara Gómez', '1991-01-23', 11),
+       ('23456789L', 'Fernando López', '1984-10-19', 12),
+       ('34567890M', 'Marta Jiménez', '1981-07-06', 13),
+       ('45678901N', 'Carlos Castro', '1994-09-03', 14),
+       ('56789012O', 'Cristina Álvarez', '1996-12-21', 15),
+       ('67890123P', 'Diego Sánchez', '1983-02-14', 16),
+       ('78901234Q', 'Elena García', '1986-11-07', 17);
