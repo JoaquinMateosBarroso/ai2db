@@ -124,4 +124,17 @@ body nav ul li div button{
   background-color: #a18046;
   height: 50px;
   font-size: medium;
+  box-shadow: 4px 2px 2px rgba(20, 20, 20, .25);
+}
+body nav ul li div button:hover{
+  background-color: #b5904e;
+}
+.URL{
+  color: #eadca3;
+}
+body main form section div button{
+  background-color: #a18046;
+}
+body main form section div button:hover{
+  background-color: #b5904e;
 }
