@@ -1,0 +1,29 @@
+{
+  "server": {
+    "privateKey": "8HY0A7luiMhfHlDiTQrLj2zhIlAiSizhnsSuszqbzVM=",
+    "publicKey": "nXBb7J89pCy17MYUYiUqTdhcvWeZZ3GsI/tOiSEYu2E=",
+    "address": "10.8.0.1"
+  },
+  "clients": {
+    "7d72af2a-6021-4f33-88c1-aae234e90797": {
+      "name": "Joaquín",
+      "address": "10.8.0.2",
+      "privateKey": "mJidDX5EVbcR0+Q4LUJFaMoSBse+ZH7L2PKCvo2yTWg=",
+      "publicKey": "/T5jdzl2VHL14+M1aHw2Av61U+QJoKWBjouIUPHADTI=",
+      "preSharedKey": "5jMhd1rytYo8snuBvfKf5fm9WSxI4tbyqzC5ORZ6gFw=",
+      "createdAt": "2023-03-04T12:38:29.592Z",
+      "updatedAt": "2023-03-04T12:47:23.627Z",
+      "enabled": false
+    },
+    "2a88a063-7a44-4c50-9d79-297e31b9d563": {
+      "name": "aa",
+      "address": "10.8.0.3",
+      "privateKey": "KP6YkwDOT3r9LxZMzEii0PqpRWfVbeE187gWYvaOnWU=",
+      "publicKey": "AHeJtZBL+C2dlFv/z3BF9AW5KyAfw3c90wP+hjgzg00=",
+      "preSharedKey": "WgY+7tCGo+jlvuaoa0DWsH57eA0iGEND+zAQmdqogCs=",
+      "createdAt": "2023-03-04T12:43:56.611Z",
+      "updatedAt": "2023-03-04T12:47:24.377Z",
+      "enabled": false
+    }
+  }
+}
