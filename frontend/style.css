@@ -1,12 +1,12 @@
 /* Styling of navigation bar */
-#navdiv{
+/*#navdiv{
     display:flex;
     width:17%;
     margin-left: 82%;
     justify-content: space-around;
     margin-top: 1%;
     height:35px;
-  }
+  }*/
   nav img{
     margin-top: 5px;
   }
@@ -92,3 +92,36 @@
   button:hover{
     border: 1px solid gray;
   }
+body{
+  background-color:#141414;
+  color: #FFFFFF;
+}
+body nav{
+  background-color: #e6d79c;
+  overflow:hidden;
+  height: 55px;
+}
+body nav ul li{
+  float:right;
+}
+
+body nav ul li a{
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  color:#FFFFFF;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: medium;
+}
+body nav ul li a:hover{
+  background-color: #eadca3;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 110%;
+}
+body nav ul li div button{
+  background-color: #a18046;
+  height: 50px;
+  font-size: medium;
+}
