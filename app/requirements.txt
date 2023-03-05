@@ -6,3 +6,4 @@ uvicorn==0.20.0
 openai
 jinja2
 python-multipart
+python-dotenv

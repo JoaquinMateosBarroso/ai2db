@@ -3,11 +3,15 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+import os
+from dotenv import load_dotenv
 
 from app.sql_traslator import SQL_Traslator
 from app.services import get_table_from_prompt
 ## Configure SQL AI Traslator with openai API KEY
-## traslator = SQL_Traslator("AQUI VA LA API KEY")
+load_dotenv()
+api_key = os.getenv('API_KEY')
+traslator = SQL_Traslator(api_key=api_key)
 
 ## Configure fast api server, static files and jinja2 templates 
 app = FastAPI(title="Ai2SQL")
@@ -24,6 +28,7 @@ async def main( request: Request, prompt: str = ""):
         headings, data = get_table_from_prompt(prompt=prompt, traslator=traslator)
         response = templates.TemplateResponse("index.html",{
             "request": request,
+            "prompt": prompt,
             "headings": headings,
             "data": data
         })

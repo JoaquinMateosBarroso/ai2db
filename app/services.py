@@ -1,8 +1,9 @@
 from app.bd import query
-
-def get_table_from_prompt(prompt: str, traslator: object) -> list:
+from app.sql_traslator import SQL_Traslator
+def get_table_from_prompt(prompt: str, traslator: SQL_Traslator) -> list:
     ## 1. Use the traslator for get the sql query
-    sql: str = prompt ## <- This is wrong... The correct way is: traslator.convert_to_sql(prompt)
+    print(prompt)
+    sql: str = traslator.convert_to_sql(text_for_query=prompt)
 
     ## 2. Use the query function to return the table
     return query(sql)
