@@ -285,5 +285,26 @@ body main form section div button:hover{
 }
 }
   
-  
+.form-control:focus,
+.form-control:active {
+   background: transparent;
+}
+#movies,
+#movies:focus,
+#movies:active {
+   background: none;
+   -webkit-appearance: none;
+}  
  
+form {
+  background: transparent;
+}
+
+input {
+  background: transparent;
+  color: white
+}
+button
+{
+  background: transparent;
+}
