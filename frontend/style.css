@@ -1,5 +1,5 @@
 @media screen and (max-width: 999px) {
-  /* Estilos para pantallas pequeñas */
+  /* Estilos para pantallas pequenas */
   #navdiv{
     display:flex;
     width:17%;
@@ -18,6 +18,8 @@
   a{
     margin-top: 8px;
     text-decoration: none;
+    backdrop-filter: blur(10px);
+    
   }
   button{
     border-radius: 3px;
@@ -145,11 +147,11 @@ body main form section div button:hover{
 @media screen and (min-width: 1000px) and (max-width: 2048px) {
   /* Estilos para pantallas medianas */
   #navdiv{
-    display:flex;
-    width:17%;
-    margin-left: 70%;
+    display:run-in;
+    width:90%;
+    margin-left: 75%;
     justify-content: space-around;
-    margin-top: 0%;
+    margin-top: 2%;
     height:35px;
   }*/
   nav img{
@@ -158,29 +160,18 @@ body main form section div button:hover{
   #googleimg{
     margin-top: 100px;
   }
-  /* Removing underline from links*/
   a{
-    margin-top: 8px;
+    margin-top: 23px;
     text-decoration: none;
   }
   button{
     border-radius: 3px;
     height:100%;
     padding:5px 12px;
-    background-color: #4C87E1 ;
+    background-color: #b5904e ;
     color:white;
     border:none;
-  }
-  /* setting up size and border stle of search bar*/
-  #maindiv{
-  width:35%;
-  border-radius: 50px;
-  display: flex;
-  height:40px;
-  border:1px solid lightgrey;
-  }
-  #inputspan{
-    width:80%;
+
   }
   span{
     vertical-align: top;
@@ -195,23 +186,13 @@ body main form section div button:hover{
     border-radius: 50px;
     margin-top: 7px;
   }
-  input{
-    height:100%;
-    width:100%;
-    border: none;
-    padding:0px;
-  }
   section{
     display: flex;
     margin-top: 2%;
-    width:23%;
+    width:25%;
     justify-content: space-around;
     margin-bottom: 2%;
-  }
-  section button{
-    padding:10px 12px;
-    background-color: lightgrey;
-    color:black;
+    margin-left: 2%;
   }
   ul{
     display: flex;
@@ -222,7 +203,7 @@ body main form section div button:hover{
     margin: 6px;
   }
   #Bottomdiv{
-    display:flex;
+    display: flex;
     font-size: 12px;
     margin-top: 3%;
   }
@@ -230,59 +211,139 @@ body main form section div button:hover{
     width:7%;
     margin-left: 31%;
   }
-  /*When hovered*/
   a:hover{
     text-decoration: underline;
   }
   button:hover{
     border: 1px solid gray;
   }
-body{
-  background-color:#141414;
-  color: #FFFFFF;
-}
-body nav{
-  background-color: #e6d79c;
-  overflow:hidden;
-  height: 55px;
-}
-body nav ul li{
-  float:right;
-}
+  body{
+    background-color: #141414;
+    color: white;
+  }
+  body nav ul li{
+    float:right;
+  }
+  body nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  body nav ul li a:hover{
+    background-color: #eadca3;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 110%;
+  }
+  body nav ul li div button{
+    background-color: #a18046;
+    height: 50px;
+    font-size: medium;
+    box-shadow: 4px 2px 2px rgba(20, 20, 20, .25);
+  }
+  body nav ul li div button:hover{
+    background-color: #b5904e;
+  }
+  .URL{
+    color: #eadca3;
+  }
+  body main form section div button{
+    background-color: #a18046;
+  }
+  body main form section div button:hover{
+    background-color: #b5904e;
+  }
+  button2 {
+    border: none;
+    display: flex;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 10px #a18046;
+    
+  }
+  button2 span2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  button2 span2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  button2:hover span2::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #b5904e;
+  }
+  button2:active span2::before {
+    background: #b5904e;
+  }
 
-body nav ul li a{
-  padding: 10px 20px;
-  display: block;
-  text-decoration: none;
-  color:#FFFFFF;
-  padding-bottom: 10px;
-  font-weight: bold;
-  font-size: medium;
-}
-body nav ul li a:hover{
-  background-color: #eadca3;
-  padding-bottom: 10px;
-  text-decoration: none;
-  font-size: 110%;
-}
-body nav ul li div button{
-  background-color: #a18046;
-  height: 50px;
-  font-size: medium;
-  box-shadow: 4px 2px 2px rgba(20, 20, 20, .25);
-}
-body nav ul li div button:hover{
-  background-color: #b5904e;
-}
-.URL{
-  color: #eadca3;
-}
-body main form section div button{
-  background-color: #a18046;
-}
-body main form section div button:hover{
-  background-color: #b5904e;
-}
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+  
+  .shadow__btn {
+    background: #c89948;
+    box-shadow: 0 0 25px #c89948;
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px #c89948,
+                0 0 25px #c89948,
+                0 0 50px #c89948,
+                0 0 100px #c89948;
+  }
+
+  .input {
+    margin: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 190px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+
 }
   
 .form-control:focus,
@@ -308,3 +369,6 @@ button
 {
   background: transparent;
 }
+
+
+
