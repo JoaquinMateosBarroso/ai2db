@@ -1,9 +1,9 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 var boton = document.getElementById("mic");
-boton.onclick = function(e) {
-    e.preventDefault()
-    const words = document.querySelector('#text');
-
+boton.onclick = function() {
 
     window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -13,8 +13,8 @@ boton.onclick = function(e) {
     recognition.interimResults = true;
     recognition.lang = "es-ES";
 
-    let p = document.createElement('p');
-    words.appendChild(p);
+    let p = document.querySelector('#text');
+    
 
     recognition.addEventListener('result', e => {
         const transcript = Array.from(e.results)
@@ -22,12 +22,15 @@ boton.onclick = function(e) {
         .map(result => result.transcript)
         .join('')
 
+        p.value = transcript;
         if(e.results[0].isFinal) {
-            words.value += transcript;
+            (document.getElementById("get")).submit();
+            return
         }
     });
 
     // recognition.addEventListener('end', recognition.start);
-
     recognition.start();
+
+
 }
