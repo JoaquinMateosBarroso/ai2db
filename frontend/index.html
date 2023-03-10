@@ -13,11 +13,8 @@
     <nav>
       <div id="navdiv">
         <ul>
-          <li><a href="/frontend/analisis.html" class="c">¿Por qué SQL?</a></li>
-          <li><a href="https://www.google.com/gmail/about/#" class="c">Gmail</a></li>
-          <li><a href="https://www.google.co.in/imghp?hl=en&tab=wi&ogbl" class="c">Images</a></li>
+          <li><a href="/frontend/analisis.html" class="shadow__btn">¿Por qué SQL?</a></li>
           <!--<div><img src=""></div>-->
-          <li><div><button type="submit" name="button">Sign In</button></div></li>
         </ul>
       </div>
     </nav>
@@ -33,12 +30,16 @@
           <div id="maindiv">
             <!-- <span id="search"><img src="search.png"></span> -->
             &nbsp;&nbsp;&nbsp;
-            <input type="text" name="prompt" id="text" placeholder="¿Qué quieres saber?" style="outline: none">
+            <input placeholder="¿Que quieres saber?" class="input" name="prompt" id="text" type="text">
             <span><button id="mic" onclick="mySpeechRecognition()" style="outline: none"> <img src="/frontend/images/mic.png" height="100%" ></button></span>
           </div>
           <section>
-            <div><a href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="URL">Info</a></div>
-            <div><button type="submit" class="URL">Hacer solicitud</button></div>
+            <div><button2 href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="button2">INFO
+              <span2></span2>
+            </button2></div>
+            <div><button2 type="submit" class="button2">HACER SOLICITUD
+              <span2></span2>
+            </button2></div>
           </section>
         </form>
         <div id="Bottomdiv">
@@ -46,21 +47,30 @@
         
         {% if data %}
         PROMPT: {{ prompt }}
-        <table>
-          <tr>
+        <table class="table">
+          <tr class="table-header">
           {% for header in headings %}
-            <th>{{ header }}</th>
+            <th class="header-th">{{ header }}</th>
           {% endfor %}
           </tr>
           {% for row in data %}
-          <tr>
+          <tr class="table-body">
             {% for cell in row %}
-              <td>{{ cell }}</td>
+              <td class="body-td">{{ cell }}</td>
             {% endfor %}
           </tr>
           {% endfor %}
         </table> 
         {% endif %}
+
+        <table class="table">
+          <tr class="table-header">
+            <th class="header-th">Cabecera</th>
+          </tr>
+          <tr class="table-body">
+              <td class="body-td">Datos</td>
+          </tr>
+        </table> 
 
         <!--  Esto es para hacer pruebas para subir el csv !-->
         <!-- <h2>Enviar archivo CSV</h2>
@@ -75,3 +85,4 @@
     </main>
   </body>
 </html>
+
