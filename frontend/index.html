@@ -22,17 +22,16 @@
     <!-- Main body of google -->
     <main>
       <center>
-        <img src="/frontend/images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
+        <img src="/images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
         <!-- Search bar -->
         
           
-        <form action="/" method="get" id="get">
+        <form action="/" method="get">
           <div id="maindiv">
             <!-- <span id="search"><img src="search.png"></span> -->
             &nbsp;&nbsp;&nbsp;
-            <input type="text" name="prompt" id="text" placeholder="¿Qué quieres saber?" style="outline: none">
-            <button id="mic" type="button" style="outline: none"> <img src="/frontend/images/mic.png" height="100%" ></button>
-
+            <input placeholder="¿Que quieres saber?" class="input" name="prompt" id="text" type="text">
+            <span><button id="mic" onclick="mySpeechRecognition()" style="outline: none"> <img src="/frontend/images/mic.png" height="100%" ></button></span>
           </div>
           <section>
             <div><button2 href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="button2">INFO
@@ -43,10 +42,9 @@
             </button2></div>
           </section>
         </form>
-        <div><a href="" class="URL">Work, learn and run your bussiness from home</a></div>
         <div id="Bottomdiv">
         </div>
-        
+
         {% if data %}
         PROMPT: {{ prompt }}
         <table class="table">
@@ -63,16 +61,7 @@
           </tr>
           {% endfor %}
         </table> 
-        {% endif %}
-
-        <table class="table">
-          <tr class="table-header">
-            <th class="header-th">Cabecera</th>
-          </tr>
-          <tr class="table-body">
-              <td class="body-td">Datos</td>
-          </tr>
-        </table> 
+        {% endif %}   
 
         <!--  Esto es para hacer pruebas para subir el csv !-->
         <!-- <h2>Enviar archivo CSV</h2>
@@ -87,4 +76,3 @@
     </main>
   </body>
 </html>
-
