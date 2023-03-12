@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This link tag is used to link html file with css file -->
+    <link rel="stylesheet" href="/frontend/style.css">
+    <title></title>
+  </head>
+
+  <body>
+    <!--Nav tag is used here for navigation bar at top right corner -->
+    <nav>
+      <div id="navdiv">
+        <ul>
+          <li><a href="/frontend/analisis.html" class="shadow__btn">¿Por qué SQL?</a></li>
+          <!--<div><img src=""></div>-->
+        </ul>
+      </div>
+    </nav>
+    <!--End of navigation -->
+    <!-- Main body of google -->
+    <main>
+      <center>
+        <img src="/frontend/images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
+        <!-- Search bar -->
+        
+          
+        <form action="/" method="get">
+          <div id="maindiv">
+            <!-- <span id="search"><img src="search.png"></span> -->
+            &nbsp;&nbsp;&nbsp;
+            <input placeholder="¿Que quieres saber?" class="input" name="prompt" id="text" type="text">
+            <span><button2 id="mic" onclick="mySpeechRecognition()" style="outline: none"> <img id="mic" src="/frontend/images/mic.png" height="100%" ></button2></span>
+          </div>
+          <section>
+            <div><button href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="button">INFO
+              <span2></span2>
+            </button></div>
+            <div><button type="submit" class="button">HACER SOLICITUD
+              <span2></span2>
+            </button></div>
+          </section>
+        </form>
+        <div id="Bottomdiv">
+        </div>
+
+        {% if data %}
+        PROMPT: {{ prompt }}
+        <table class="table">
+          <tr class="table-header">
+          {% for header in headings %}
+            <th class="header-th">{{ header }}</th>
+          {% endfor %}
+          </tr>
+          {% for row in data %}
+          <tr class="table-body">
+            {% for cell in row %}
+              <td class="body-td">{{ cell }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </table> 
+        {% endif %}   
+
+        <!--  Esto es para hacer pruebas para subir el csv !-->
+        <!-- <h2>Enviar archivo CSV</h2>
+        <form action="/uploadfile/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br><br> -->
+            <!-- <input type="submit" value="Enviar archivo"> -->
+        </form>
+
+      </center>
+      <script src="/frontend/script.js"></script>
+    </main>
+  </body>
+</html>
+
+
+
+
