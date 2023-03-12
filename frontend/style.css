@@ -1,0 +1,431 @@
+@media screen and (max-width: 999px) {
+  /* Estilos para pantallas medianas */
+  #navdiv{
+    display:auto;
+    margin-left: 70%;
+    width: 20px;
+    justify-content: space-around;
+    margin-top: 1%;
+    height:35px;
+    margin-left: 80%;
+    text-align: center;
+  }*/
+  nav img{
+    margin-top: 5px;
+  }
+  #googleimg{
+    margin-top: 100px;
+  }
+  a{
+    margin-top: 23px;
+    text-decoration: none;
+  }
+  #mic{
+    border-radius: 3px;
+    height:100%;
+    padding:0% 0%;
+    border:none;
+    margin-top: 28px;
+    margin-right: 1%;
+
+  }
+  span{
+    margin-top: 2%;
+    vertical-align: top;
+  }
+  span:first-child{
+    width:10%;
+    border-radius: 50px;
+    margin-top: 7px;
+  }
+  span:last-child{
+    width:10%;
+    border-radius: 50px;
+    margin-top: 7px;
+  }
+  section{
+    display: flex;
+    margin-top: 2%;
+    width:25%;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-left: 1%;
+  }
+  ul{
+    display: flex;
+    width: 30%;
+    list-style: none;
+    justify-content: space-around;
+    margin: 6px;
+  }
+  #Bottomdiv{
+    display: flex;
+    font-size: 12px;
+    margin-top: 3%;
+  }
+  #Bottomdiv span{
+    width:7%;
+    margin-left: 31%;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  body{
+    background-color: #141414;
+    color: white;
+  }
+  body nav ul li a{
+    padding: 1px 2px;
+    display: block;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  body nav ul li a:hover{
+    background-color: #eadca3;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 110%;
+  }
+  .URL{
+    color: #eadca3;
+  }
+  button {
+    border: none;
+    display: flex;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 10px #a18046;
+    
+  }
+  button span2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  button span2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  button:hover span2::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #b5904e;
+  }
+  button:active span2::before {
+    background: #b5904e;
+  }
+
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+  
+  .shadow__btn {
+    background: #c89948;
+    box-shadow: 0 0 25px #c89948;
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px #c89948,
+                0 0 25px #c89948,
+                0 0 50px #c89948,
+                0 0 100px #c89948;
+  }
+
+  .input {
+    margin: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 190px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    margin-left: 1%;
+  }
+
+  table {
+    position: relative;
+    border-collapse: collapse; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    margin-left: 1%;
+  }
+  th, td {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    padding: 20px 30px;
+    border: 1px solid white;
+    text-align: center;
+  }
+   
+  th {  
+    position: sticky;
+    top: 0; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background-color: #c89948;
+  }
+}
+  
+@media screen and (min-width: 999px) {
+  /* Estilos para pantallas medianas */
+  #navdiv{
+    display:auto;
+    margin-left: 70%;
+    width: 20px;
+    justify-content: space-around;
+    margin-top: 1%;
+    height:35px;
+    margin-left: 90%;
+    text-align: center;
+  }*/
+  nav img{
+    margin-top: 5px;
+  }
+  #googleimg{
+    margin-top: 100px;
+  }
+  a{
+    margin-top: 23px;
+    text-decoration: none;
+  }
+  #mic{
+    border-radius: 10px;
+    height:100%;
+    padding:0% 0%;
+    border:none;
+    margin-top: 28px;
+    margin-right: 1%;
+
+  }
+  span{
+    vertical-align: top;
+  }
+  span:first-child{
+    width:10%;
+    border-radius: 50px;
+    margin-top: 7px;
+  }
+  span:last-child{
+    width:10%;
+    border-radius: 50px;
+    margin-top: 7px;
+  }
+  section{
+    display: flex;
+    margin-top: 2%;
+    width:25%;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-left: 1%;
+  }
+  ul{
+    display: flex;
+    width: 30%;
+    list-style: none;
+    justify-content: space-around;
+    margin: 6px;
+  }
+  #Bottomdiv{
+    display: flex;
+    font-size: 12px;
+    margin-top: 3%;
+  }
+  #Bottomdiv span{
+    width:7%;
+    margin-left: 31%;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  body{
+    background-color: #141414;
+    color: white;
+  }
+  body nav ul li a{
+    padding: 1px 2px;
+    display: block;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: medium;
+  }
+  body nav ul li a:hover{
+    background-color: #eadca3;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 110%;
+  }
+  .URL{
+    color: #eadca3;
+  }
+  button {
+    border: none;
+    display: flex;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 500;
+    text-shadow: 0 0 10px #a18046;
+    
+  }
+  button span2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  button span2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  button:hover span2::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #b5904e;
+  }
+  button:active span2::before {
+    background: #b5904e;
+  }
+
+  .shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+  
+  .shadow__btn {
+    background: #c89948;
+    box-shadow: 0 0 25px #c89948;
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px #c89948,
+                0 0 25px #c89948,
+                0 0 50px #c89948,
+                0 0 100px #c89948;
+  }
+
+  .input {
+    margin: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 190px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    margin-left: 1%;
+  }
+
+  table {
+    position: relative;
+    border-collapse: collapse; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    margin-left: 1%;
+  }
+  th, td {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    padding: 20px 30px;
+    border: 1px solid white;
+    text-align: center;
+  }
+   
+  th {  
+    position: sticky;
+    top: 0; 
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background-color: #c89948;
+  }
+
+  
+
+}
+
+  
+#movies,
+#movies:focus,
+#movies:active {
+   background: none;
+   -webkit-appearance: none;
+}  
+ 
+form {
+  background: transparent;
+}
+
+input {
+  background: transparent;
+  color: white
+}
+button
+{
+  background: transparent;
+}
+
+
+
