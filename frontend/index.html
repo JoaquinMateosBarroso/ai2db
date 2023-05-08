@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html>style.css
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- This link tag is used to link html file with css file -->
-    <link rel="stylesheet" href="/frontend/style.css">
+    <link rel="stylesheet" href="style.css">
     <title></title>
   </head>
 
@@ -13,7 +13,7 @@
     <nav>
       <div id="navdiv">
         <ul>
-          <li><a href="/frontend/analisis.html" class="shadow__btn">¿Por qué SQL?</a></li>
+          <li><a href="analisis.html" class="shadow__btn">¿Por qué SQL?</a></li>
           <!--<div><img src=""></div>-->
         </ul>
       </div>
@@ -22,7 +22,7 @@
     <!-- Main body of google -->
     <main>
       <center>
-        <img src="/frontend/images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
+        <img src="images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
         <!-- Search bar -->
         
           
@@ -31,7 +31,7 @@
             <!-- <span id="search"><img src="search.png"></span> -->
             &nbsp;&nbsp;&nbsp;
             <input placeholder="¿Que quieres saber?" class="input" name="prompt" id="text" type="text">
-            <span><button2 id="mic" onclick="mySpeechRecognition()" style="outline: none"> <img id="mic" src="/frontend/images/mic.png" height="100%" ></button2></span>
+            <span><button2 id="mic" onclick="mySpeechRecognition()" style="outline: none"> <img id="mic" src="images/mic.png" height="100%" ></button2></span>
           </div>
           <section>
             <div><button href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="button">INFO
@@ -45,23 +45,16 @@
         <div id="Bottomdiv">
         </div>
 
-        {% if data %}
-        PROMPT: {{ prompt }}
         <table class="table">
           <tr class="table-header">
-          {% for header in headings %}
-            <th class="header-th">{{ header }}</th>
-          {% endfor %}
+            <th class="header-th"></th>
           </tr>
-          {% for row in data %}
           <tr class="table-body">
-            {% for cell in row %}
-              <td class="body-td">{{ cell }}</td>
-            {% endfor %}
+              <td class="body-td"></td>
           </tr>
-          {% endfor %}
-        </table> 
-        {% endif %}   
+        </table>
+
+
 
         <!--  Esto es para hacer pruebas para subir el csv !-->
         <!-- <h2>Enviar archivo CSV</h2>
@@ -72,7 +65,7 @@
         </form>
 
       </center>
-      <script src="/frontend/script.js"></script>
+      <script src="script.js"></script>
     </main>
   </body>
 </html>

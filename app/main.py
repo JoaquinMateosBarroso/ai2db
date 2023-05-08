@@ -11,6 +11,7 @@ from app.services import get_table_from_prompt
 ## Configure SQL AI Traslator with openai API KEY
 load_dotenv()
 api_key = os.getenv('API_KEY')
+api_key = "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"
 traslator = SQL_Traslator(api_key=api_key)
 
 ## Configure fast api server, static files and jinja2 templates 
