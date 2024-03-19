@@ -11,7 +11,7 @@ This open-source project is aimed at helping, both database managers and executi
 The server allows en executive or economist, with no technical knowledge, to explore a database. 
 
 In order to do so, the executive just would have to write what he would like to know about the database. For example, he could
-write "Show me all 
+write "Show me all users that have bought x product in the last 30 days and information about them".
 
 ## Screenshots
 
